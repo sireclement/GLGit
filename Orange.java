@@ -56,5 +56,6 @@ public class Orange {
 	System.out.println(o2);
 	System.out.println(o3);
 	System.out.println(o4);
+	System.out.println(o4.getOrigine());
    }
 }

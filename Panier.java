@@ -27,6 +27,10 @@ public class Panier extends Observable {
     public int getContMax(){
 	return cont_max;
     }
+
+    public void setContMax(int cont){
+	cont_max = cont;
+    }
     
     public boolean estVide(){
         return getFruits().isEmpty();
