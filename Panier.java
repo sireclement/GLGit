@@ -51,6 +51,22 @@ public class Panier extends Observable {
             return false;
     }
 
+    public boolean retire() {
+        if(!estVide()){
+            getFruits().remove(getFruits().size()-1);
+	    return true;
+	}
+        else 
+	   return false;
+    }
+
+    public double getPrix(){
+	double total=0;
+	for(int i = 0 ; i < getFruits().size() ; i++)
+            total += getFruits().get(i).getPrix();
+	return total;
+    }
+
     public static void main (String[] args){
         Orange o1 = new Orange(0.50,"France");
         Orange o2 = new Orange(0.60,"Italie");
