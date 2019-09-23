@@ -32,6 +32,10 @@ public class Orange {
     public void setPrix(double prix){
 	this.prix=prix;
     }
+
+    public String getOrigine(){
+	return origine;
+    }
  
     public void setOrigine(String country){
 	this.origine=origine;

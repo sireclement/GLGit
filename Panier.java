@@ -8,14 +8,12 @@ public class Panier extends Observable {
     private int cont_max;   //nb maximum d'oranges que peut contenir le panier
 	
     public Panier(int max){
-	if(max >= 0){
+	if(max >= 0)
 	   cont_max = max;
-	   fruits = new ArrayList<Orange>(max);  //panier vide
-	}
-	else {    //eviter une contenance max negative
-	   cont_max = 1;   //dans ce cas, on choisit que le panier ne pourra contenir qu'un element
-	   fruits = new ArrayList<Orange>(1);  //panier vide
-	}
+	else           //contenance max negative, on prend l'oppose
+	   cont_max = -max;    
+
+	fruits = new ArrayList<Orange>(max);   //panier vide
     }
     
     public ArrayList<Orange> getFruits() {
