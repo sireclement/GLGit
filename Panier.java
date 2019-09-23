@@ -84,6 +84,8 @@ public class Panier extends Observable {
 	System.out.println("Contenu du panier p2 (initialise à max=2) apres 3 ajouts : " + p2.getContenance());
 
 	Panier pneg = new Panier(-2);   //contenance max negative !
+	if(! pneg.estVide())
+	   return;
 	System.out.println("contenance max du panier pneg (initialise à max = -2) : " + pneg.getContMax() + ", et contenu : "  + pneg.getContenance() );
 	pneg.ajoute(o1);
         System.out.println("Contenu du panier pneg (initialise à max = -2) apres 1 ajout : " + pneg.getContenance());
